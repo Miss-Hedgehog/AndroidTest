@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         textViewHelloWorld=this.findViewById(R.id.text_hello_world);
         String strHellWorld=textViewHelloWorld.getText().toString();
-        textViewHelloWorld.setText("test");
+        textViewHelloWorld.setText("test1");
         textViewHelloWorld.setText(R.string.hello_world2);
 
         String strHelloWorld2=this.getResources().getText(R.string.hello_world2).toString();

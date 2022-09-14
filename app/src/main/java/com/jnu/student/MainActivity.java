@@ -4,28 +4,36 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
-import android.util.Log;
-
 
 public class MainActivity extends AppCompatActivity {
-
     private TextView textViewHelloWorld;
-
-    @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        textViewHelloWorld=this.findViewById(R.id.text_hello_world);
-        String strHellWorld=textViewHelloWorld.getText().toString();
-        textViewHelloWorld.setText("test1");
-        textViewHelloWorld.setText(R.string.hello_world2);
+        textViewHelloWorld=findViewById(R.id.text_view_hello_world);
 
-        String strHelloWorld2=this.getResources().getText(R.string.hello_world2).toString();
-        textViewHelloWorld.setText(strHelloWorld2);
+        Button buttonChinese=findViewById(R.id.button_chinese);
+        Button buttonEnglish=findViewById(R.id.button_english);
+        buttonChinese.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                textViewHelloWorld.setText(R.string.string_chinese);
+            }
+        });
+        buttonEnglish.setOnClickListener(new EnglishClickListener());
 
 
+    }
 
+    private class  EnglishClickListener implements View.OnClickListener {
+        @Override
+        public void onClick(View view) {
+            textViewHelloWorld.setText(R.string.string_english);
+
+        }
     }
 }

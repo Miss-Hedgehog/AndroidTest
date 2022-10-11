@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">我的第一个应用</string>
+    <string name="app_name">高嘉莉的应用</string>
     <string name="hello_world">你好Android</string>
-    <string name="string_chinese">chinese</string>
-    <string name="string_english">english</string>
+    <string name="text_hello">Hello</string>
+    <string name="text_world">World</string>
+    <string name="string_changeText">change text</string>
 </resources>
